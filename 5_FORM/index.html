@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h2>formulários HTML</h2>
+    <!--1 Primeiro formulário-->
+    <!--2 atributo do formulário-->
+    <form action="register.php" method="POST">
+        <div>
+            <label>Nome</label>
+        <input type="text">
+        </div>
+        <!-- 3 atributo name -->
+         <div>
+            <!--4 ATRIBUTO LABEL-->
+            <label for="age">Idade</label> <!--for serve para referenciar a label de forma mais fácil -->
+            <input type="text" name="age"> <!--name serve para referenciar o input de forma mais fácil -->
+         </div>
+         <!--6 select -->
+         <div>
+            <label for="job">selecione seu trabalho</label>
+            <select name="job">
+                <option value="pescador">Pescador</option>
+                <option value="pedreiro">Pedreiro</option>
+                <option value="puta">Puta</option>
+            </select>
+         </div>
+         <!--7 atributo selected-->
+         <div>
+         <label for="contract">Você leu os termos do contrato ?</label>
+         <select name="contact">
+            <option value="sim">Sim</option>
+            <option value="nao" selected>Não</option><!-- deixa pré selecionada a opção desejada-->
+         </select>
+        </div>
+        <!-- 8 multiplas opções-->
+         <div>
+            <label for="items">Selecione os itens desejados</label>
+            <select name="items" multiple> <!--permite a multipla seleção de opções--> 
+                <option value="pera">pera</option>
+                <option value="maça">maça</option>
+                <option value="abacate">abacate</option>
+                <option value="milho">milho</option>
+            </select>
+         </div>
+         <!-- 9 textarea-->
+          <!--feito para escrever textos mais extensos -->
+          <div>
+            <label for="coment">Escreva abaixo o que você achou do post:</label>
+            <textarea name="coment"></textarea>
+          </div>
+          <!-- 10 fieldset e legend--> 
+          <!-- você prepara um campo para informaçoes similares ou coisas do genero-->
+          <div>
+            <fieldset>
+                <legend>Escreva as suas informações</legend>
+                <label for="firstname">Nome:</label>
+                <input type="text" name="firstname" >
+                <label for="lastname">Sobrenome:</label>
+                <input type="text" name="lastname" >
+            </fieldset>
+          </div>
+          <!-- 11 datalist-->
+           <!-- cria um autocomplete dentro dos inputs para facilitar para o usuário-->
+           <div>
+            <label for="flavor">Selecione o sabor</label>
+            <input type="text" list="flavors" name="flavor"> <!-- precisa linkar com o atributo list-->
+
+            <datalist id="flavors">
+                <option value="cereja"></option>
+                <option value="morango"></option>
+                <option value="bacon"></option>
+                <option value="abacaxi"></option>
+                <option value="ração"></option>
+            </datalist>
+           </div>
+           <!-- 12 input de senha-->
+            <div>
+                <label for="password">senha</label>
+                <input type="password" name="password">
+            </div>
+            <!--14 radio button-->
+            <div>
+                <label for="car_model">Escolha o modelo do seu carro</label>
+                <div class="radio">
+                    <input type="radio" value="bmw" name="car_model"><!--quando a label é do radio, ela vai ser igual ao valor dele-->
+                    <label for="bmw">BMW</label> 
+                </div>
+                <div class="radio">
+                    <input type="radio" value="vectra" name="car_model"><!--quando a label é do radio, ela vai ser igual ao valor dele-->
+                    <label for="vectra">Vectra</label> 
+                </div>
+                <div class="radio">
+                    <input type="radio" value="corsa" name="car_model"><!--quando a label é do radio, ela vai ser igual ao valor dele-->
+                    <label for="corsa">Corsa</label> 
+                </div>
+            </div>
+            <!-- 15 checkbox (muito parecido com a radio button, porém você pode desmarcar a opção)-->
+             <div>
+                <label for="optionals">Escolha os seus opcionais</label>
+                <div class="radio">
+                    <input type="checkbox" value="big_tires" name="optionals[]"><!-- para enviar mais de um via array (lista) precisa abrir o colchetes-->
+                    <label for="big_tires">Pneus grandes</label>
+                </div>
+                <div class="radio">
+                    <input type="checkbox" value="turbo_engine" name="optionals[]"><!-- para enviar mais de um via array (lista) precisa abrir o colchetes-->
+                    <label for="turbo_engine">Motor Turbo</label>
+                </div>
+                <div class="radio">
+                    <input type="checkbox" value="paint_yellow" name="optionals[]"><!-- para enviar mais de um via array (lista) precisa abrir o colchetes-->
+                    <label for="paint_yellow">Pintura amarela</label>
+                </div>
+             </div>
+             
+             <!--16 Datas-->
+             <div>
+                <label for="birthday">Data de Aniversário</label>
+                <input type="date" name="birthday">
+             </div>
+             <!--17 input files-->
+             <div>
+                <label for="files">Insira seu arquivo abaixo:</label>
+                <input type="file" name="files">
+             </div>
+             <!--18 input numbers-->
+             <div>
+                <label for="numbers">Insira uma numeração legal:</label>
+                <input type="number" name="numbers">
+             </div>
+             <!--19 input email-->
+             <!--o interessante desse input é que ele faz a validação do email, checando se ele tem um @-->
+             <div>
+                <label for="emails">Insira seu email</label>
+                <input type="email" name="emails">
+             </div>
+             <!--20 value-->
+             <div>
+                <label for="value">Insira algum valor</label>
+                <input type="text" value="Exemplo: 12" name="value">
+             </div>
+             <!-- 21 DISABLE-->
+              <div>
+                <p>Tente mudar o valor</p>
+                <input type="text" value="Não precisa colocar valor algum" disabled>
+              </div>
+              <!-- 22 placeholder-->
+               <div>
+                <label for="currentjob">Digite sua profissão atual:</label>
+                <input type="text" name="currentjob" placeholder="Emprego atual?">
+               </div>
+               <!--23 required-->
+               <div>
+                <label for="birthyear">Ano de nascimento:</label>
+                <input type="text" name="birthyear" placeholder="Digite o ano que você nasceu" required>
+               </div>
+            <!--13 resetar form -->
+            <input type="reset" value="Limpar">
+         <!--5 ENVIO DE FORM--> <!--Value serve para nomear o submit-->
+         <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

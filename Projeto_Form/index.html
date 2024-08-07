@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto com formulários</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h3>Cadastre seu instrumento para vender mais rápido!</h3>
+        </div>
+    
+    <div class="form-container">
+        <div class="form-header">
+            <p>Formulário</p>
+        </div>
+        <div class="form-body">
+            <h1 class="form-title">Venda fácil o seu instrumento musical</h1>
+            <p>Descreva as características ou danos que ele possuí</p>
+        
+        <form>
+            <div class="box-input">
+                <label for="title">Título do anúncio:<span class="required-field-red">*</span></label>
+                <input type="text"
+                 name="title" 
+                 id="title" 
+                 class="block" 
+                 placeholder="Insira o título aqui!" 
+                 required
+                 minlength="1"
+                 maxlength="30">
+            </div>    
+            <div class="box-input">
+                <label for="price">Preço:<span class="required-field-red">*</span></label>
+                <input type="number" 
+                name="price" 
+                id="price" 
+                class="block" 
+                placeholder="Defina o preço" 
+                required
+                minlength="1"
+                maxlength="30">
+            </div>   
+            <div class="box-input">
+                <label for="description">Descrição:<span class="required-field-red">*</span></label>
+                <textarea name="description" 
+                id="description" 
+                class="block"
+                placeholder="Descreva os detalhes do instrumento" 
+                minlength="10" 
+                maxlength="300">
+                </textarea>
+            </div> 
+            <div class="box-input">
+                <label for="brand">Marca:<span class="required-field-red">*</span></label>
+                <input type="text" 
+                name="brand" 
+                id="brand" 
+                class="block" 
+                placeholder="Informe a marca do instrumento" 
+                required>
+            </div>       
+            <div class="box-input">
+                <label for="model">Modelo:<span class="required-field-red">*</span></label>
+                <input type="text" 
+                name="model" 
+                id="model" 
+                class="block" 
+                placeholder="Informe o modelo do instrumento" 
+                required>              
+            </div>   
+            <div class="box-input">
+                <label for="age">Ano:<span class="required-field-red">*</span></label>
+                <input type="number" 
+                name="age" 
+                id="age" 
+                class="block" 
+                placeholder="Informe o ano" 
+                required>
+            </div>
+            <div class="box-input">
+                <label for="purchase_age">Data de compra:<span class="required-field-red">*</span></label>
+                <input type="number" 
+                name="purchase_age" 
+                id="purchase_age" 
+                class="block" 
+                placeholder="Informe a data que você adquiriu o instrumento" 
+                required>
+            </div>
+            <div class="box-input">
+                <p>Tipo de instrumento:<span class="required-field-red">*</span></p>
+                <input type="radio" id="corda" name="type"/> 
+                <label for="corda">Corda</label>
+                <input type="radio" id="madeira" name="type"/>
+                <label for="madeira">Madeira</label> 
+                <input type="radio" id="percussao" name="type"/>
+                <label for="percussao">Percussão</label> 
+                <input type="radio" id="metal" name="type"/>
+                <label for="metal">Metal</label>
+            </div>   
+            <div class="box-input">
+                <p>Adicionais</p>
+                <ul class="additional-list">
+                    <li>
+                        <input type="checkbox" 
+                        id="capa" 
+                        name="additional[]" 
+                        value="capa">
+                        <label for="capa">Capa</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" 
+                        id="palheta" 
+                        name="additional[]" 
+                        value="palheta">
+                        <label for="palheta">Palheta</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" 
+                        id="baqueta" 
+                        name="additional[]" 
+                        value="baqueta">
+                        <label for="baqueta">Baqueta</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" 
+                        id="capotraste" 
+                        name="additional[]" 
+                        value="capotraste">
+                        <label for="capotraste">Capotraste</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" 
+                        id="cordas" 
+                        name="additional[]" 
+                        value="cordas">
+                        <label for="cordas">Cordas</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" 
+                        id="pele" 
+                        name="additional[]" 
+                        value="pele">
+                        <label for="pele">Pele</label>
+                    </li>
+                </ul>
+            </div>
+                <div class="box-input">
+                    <p>Fotos do instrumento<span class="required-field-red">*</span></p>
+                    <input type="file" multiple accept="image/png, image/jpg" id="images" name="images" required>
+                </div>
+            
+       
+            <input type="submit" value="Enviar" class="btn-submit">
+        </div>  
+        </form>
+    </div>
+</div>
+</body>
+</html>

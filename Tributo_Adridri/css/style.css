@@ -1,0 +1,64 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e792ff;
+}
+.container{
+    max-width: 1100px;
+    background-color: #f07eb3;
+    position: relative;
+    margin: 50px auto;
+    padding: 20px 50px;
+}
+.header{
+    text-align: center;
+}
+.main-tittle{
+    color: rgb(255, 0, 162);
+}
+.main-paragraph{
+    color: rgb(255, 0, 144);
+    font-style: italic;
+}
+
+/*Imagem principal*/
+.img-1{
+    text-align: center;
+    margin-top: 30px;
+}
+
+/*Biografia*/
+.biography-container{
+    padding: 25px 0px;
+    margin: 25px 0px;
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+}
+/*quotes*/
+.quotes-container{
+    background-color: #e792ff;
+    padding: 30px;
+}
+
+.quotes-container blockquote{
+    font-weight: bold;
+    font-size: 30px;
+}
+.quotes-container p{
+    font-style: italic;
+}
+.curiosites-container{
+    padding: 25px 0px;
+    margin: 25px 0px;
+    border-bottom: 1px dashed #ddd;
+    border-TOP: 1px dashed #ddd;
+}
+.curiosites-container li{
+    height: 30px;
+}
+.img-bold{
+    font-weight: bold;
+    text-align: center;
+}
+.pink{
+    color: rgb(230, 5, 247);
+}
